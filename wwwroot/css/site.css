@@ -1,0 +1,51 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    font-family: 'Manrope', sans-serif;
+}
+
+h1 {
+    font-weight: 700 !important;
+}
+
+label {
+    font-weight: 400;
+}
+
+.lightened-shadow {
+    text-shadow: 1.5px 1.5px 3px rgb(0, 0, 0, 0.6);
+}
+
+.nav-item a {
+    font-weight: 400;
+}
+
+#nav-home {
+    font-weight: 600;
+}
+
+option {
+    font-weight: 400;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.job-remove {
+    text-decoration: none;
+}

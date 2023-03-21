@@ -1,0 +1,45 @@
+﻿@model Job
+
+<div class="card">
+    <div class="card-header">
+        <div class="text-center">
+            <h1 class="display-4 text-warning lightened-shadow">Add Another Job Application</h1>
+        </div>
+    </div>
+    <div class="card-body">
+        <form id="new-job-app" method="post">
+            <div id="first-row" class="row mb-4">
+                <div class="col-2">
+                    <label asp-for="JobTitle" for="job-title" class="col-form-label">Job Title*:</label>
+                    <input asp-for="JobTitle" id="job-title" class="form-control" type="text"/>
+                </div>
+                <div class="col-2">
+                    <label asp-for="Organization" for="employer" class="col-form-label">Employer*:</label>
+                    <input asp-for="Organization" id="employer" class="form-control" type="text"/>
+                </div>
+                <div class="col-3 d-flex flex-column">
+                    <label asp-for="JobPlatform" for="job-platform" class="col-form-label">Job Platform*:</label>
+                    <select asp-for="JobPlatform" id="job-platform" class="form-select">
+                        <option value="" disabled selected hidden>Select Job Platform</option>
+                    </select>
+                </div>
+                <div class="col-1"></div>
+                <div class="col-4">
+                    <label asp-for="Notes" for="job-notes" class="col-form-label">Notes:</label>
+                    <textarea asp-for="Notes" class="form-control" id="job-notes" rows="2"></textarea>
+                </div>
+            </div>
+            <div id="alt-row" class="row" hidden>
+                <div class="col-2"></div>
+                <div class="col-2"></div>
+                <div class="col-3">
+                    <label for="other-platform" class="col-form-label">Describe "Other":&nbsp;</label>
+                    <input id="other-platform" class="form-control" />
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="card-footer">
+        <button id="job-submit" class="btn btn-primary" form="new-job-app" type="submit" asp-controller="Jobs" asp-action="Create">Add to jobs applied list</button>
+    </div>
+</div>
